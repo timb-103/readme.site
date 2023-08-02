@@ -48,6 +48,9 @@ const loading = ref(false)
 async function save() {
   loading.value = true
 
+  // track the event in plausible
+  useTrackEvent('save')
+
   try {
     const response = await $fetch<string>('/api/save', {
       method: 'POST',
