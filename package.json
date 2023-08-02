@@ -1,0 +1,22 @@
+{
+  "name": "readme.site",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "@types/node": "18.17.1",
+    "nuxt": "3.6.5"
+  },
+  "dependencies": {
+    "@nuxt/content": "^2.7.2",
+    "@nuxtjs/plausible": "^0.2.1",
+    "nuxt-mongodb": "^1.0.6",
+    "nuxt-simple-css": "1.0.3"
+  }
+}
