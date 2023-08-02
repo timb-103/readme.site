@@ -3,6 +3,7 @@
     <!-- Avatar -->
     <img
       class="avatar"
+      :alt="`${data.username}'s' avatar`"
       :src="`https://github.com/${data.username}.png?size=100`"
       width="50"
       height="50"
