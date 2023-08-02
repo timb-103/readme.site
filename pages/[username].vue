@@ -1,7 +1,12 @@
 <template>
   <main v-if="data">
     <!-- Avatar -->
-    <img class="avatar" :src="`https://github.com/${data.username}.png`" width="50" height="50" />
+    <img
+      class="avatar"
+      :src="`https://github.com/${data.username}.png?size=100`"
+      width="50"
+      height="50"
+    />
 
     <!-- Markdown -->
     <ContentRenderer :value="{ data: data.content }">
@@ -39,6 +44,7 @@ const { data } = await useAsyncData('username', async () => {
 <style scoped>
 .avatar {
   border-radius: 50%;
+  background: #fafafa;
 }
 main:deep(hr) {
   height: 3px;
