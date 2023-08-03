@@ -81,7 +81,7 @@ async function save() {
     // change to the readme page
     navigateTo(`/${response}`)
   } catch (error: any) {
-    errors.value = error.statusMessage || error.message
+    errors.value = 'Error saving. Please check username.'
   }
 
   loading.value = false
