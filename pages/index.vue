@@ -86,4 +86,11 @@ async function save() {
 
   loading.value = false
 }
+
+useHead({
+  meta: [
+    { property: 'og:image', content: 'https://301redirect.to/images/og.jpg' },
+    { name: 'twitter:image', content: 'https://readme.site/images/og.jpg' },
+  ],
+})
 </script>

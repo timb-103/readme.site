@@ -50,6 +50,8 @@ const { data } = await useAsyncData('username', async () => {
   // transform to @nuxt/content format and return it
   const content = await transformContent(`content:${readme.username}.md`, replacedString)
 
+  console.log('content:', content)
+
   return {
     content,
     username: readme.username,
@@ -68,6 +70,21 @@ function replaceRelativePaths(repo: GitHubRepository, largerString: string): str
 
   return replacedString
 }
+
+// add a dynamic og image
+const ogURL = 'https://dynamic-og-image-generator.vercel.app/api/generate'
+useHead({
+  meta: [
+    {
+      property: 'og:image',
+      content: `${ogURL}?title=${data.value?.username}%27s+README.&author=README.site&theme=github`,
+    },
+    {
+      property: 'twitter:image',
+      content: `${ogURL}?title=${data.value?.username}%27s+README.&author=README.site&theme=github`,
+    },
+  ],
+})
 </script>
 
 <style scoped>

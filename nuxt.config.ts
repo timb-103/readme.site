@@ -32,7 +32,7 @@ export default defineNuxtConfig({
           content: "Host your Github README on it's own website.",
         },
         { property: 'og:title', content: 'README.site' },
-        { property: 'og:image', content: 'https://301redirect.to/images/og.jpg' },
+
         { property: 'og:image:alt', content: 'README.site' },
         {
           property: 'og:description',
@@ -43,7 +43,6 @@ export default defineNuxtConfig({
         { name: 'twitter:title', content: 'README.site' },
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:creator', content: '@timb03' },
-        { name: 'twitter:image', content: 'https://readme.site/images/og.jpg' },
         {
           name: 'twitter:description',
           content: "Host your Github README on it's own website.",
