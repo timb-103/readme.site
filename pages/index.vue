@@ -5,8 +5,13 @@
 
     <form class="notice" @submit.prevent="save()">
       <!-- Username Input-->
-      <label>Github Username:</label>
-      <input type="text" v-model="username" placeholder="eg. timb-103" />
+      <label>Github Username or Repo:</label>
+      <input
+        type="text"
+        v-model="username"
+        placeholder="eg. timb-103 or timb103/nuxt-modal"
+        style="width: 350px"
+      />
 
       <!-- Errors-->
       <div v-if="errors">
@@ -20,6 +25,20 @@
     </form>
 
     <!-- How it Works -->
+    <details>
+      <summary>How it works</summary>
+      <p>
+        Just enter your github username eg.<code>timb-103</code> or repo eg.<code>
+          timb-103/nuxt-modal
+        </code>
+        into the form above and we'll grab the readme and create it's own page.
+      </p>
+      <p>
+        In fact you don't even need to use the form above. You can just enter it in your browser as
+        <code>https://readme.site/timb-103/nuxt-modal</code> and we'll automatically get & save it.
+      </p>
+    </details>
+
     <details>
       <summary>How to update your readme.site</summary>
       <p>
