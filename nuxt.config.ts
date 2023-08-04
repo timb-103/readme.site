@@ -1,7 +1,8 @@
 export default defineNuxtConfig({
-  devtools: { enabled: false },
-  extends: ['nuxt-mongodb'],
-  modules: ['nuxt-simple-css', '@nuxt/content', '@nuxtjs/plausible'],
+  devtools: {
+    enabled: false,
+  },
+  modules: ['nuxt-simple-css', '@nuxt/content', '@nuxtjs/plausible', 'nuxt-mongodb'],
   plausible: {
     domain: 'readme.site',
   },

@@ -1,4 +1,5 @@
 import type { GitHubRepository } from '@/types/github'
+import { mongo } from '#mongodb'
 
 export async function saveReadme(username: string): Promise<string | null> {
   const db = mongo.db()

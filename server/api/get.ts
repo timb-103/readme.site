@@ -1,4 +1,5 @@
 import type { Readme } from '@/types/readme'
+import { mongo } from '#mongodb'
 
 export default defineEventHandler(async (event) => {
   const body = await readBody(event)
